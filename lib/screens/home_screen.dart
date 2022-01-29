@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '${data!.content}',
+                        '${data?.content ?? "Don't talk about what you have done or what you are going to do."}',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontSize: 20,
@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Align(
                           alignment: Alignment.bottomRight,
                           child: Text(
-                            data!.author,
+                            data?.author ?? "Thomas Jefferson",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
                               fontSize: 17,
